@@ -16,7 +16,7 @@
 | environments.
 |
 */
-$config['base_url'] = 'http://localhost/Ultra_Cv';
+$config['base_url'] = 'http://localhost:8088/Ultra_Cv';
 
 /*
 |--------------------------------------------------------------------------

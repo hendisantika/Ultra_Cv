@@ -12,13 +12,7 @@
    }
 
    function upload() {
-    if (empty($_FILES['upload']['name'])){
-      echo "<script>
-eval(\"parent.location='javascript:history.go(-1)'\");
-alert ('Belum memilih gambar!');
-</script>";
-}else  {
-  $this->input->post('upload');
+    if   ($this->input->post('upload')){  
                 $config = array(
                          'allowed_types' => 'jpg|jpeg|gif|png',
                          'upload_path' => $this->gallery_path,
@@ -32,16 +26,19 @@ alert ('Belum memilih gambar!');
                 //////// START ,Sintak untuk menyimpan data hasil upload ke database mysql 
                 $file = $this->upload->file_name;
                 $title = $this->input->post('title');
+                $kategoris=$this->input->post('kategoris');
                 $pengirim = $this->input->post('pengirim');
                 $isi = $this->input->post('isi');
                 $tgl = date('Y-m-d H:i:s');
 
   $this->db->insert('blog',array(
+              'id_category' => $kategoris,
   						'judul' => $title,
   						'pengirim'=>$pengirim,
   						'isi_blog'=> $isi,
                         'img_blog' => $file,
                         'date' => $tgl ));
+
                 ///////// END
 
            redirect ('index.php/admin_area/settings_blog');

@@ -1,4 +1,4 @@
-
+<?php foreach ($data_footers->result() as $verlitampil); ?>
         <!-- Start Footer section -->
         <footer class="footer">
             <!-- start container -->
@@ -8,27 +8,27 @@
                     <!-- start phone number -->
                     <div class="col-xs-12 col-sm-6 col-lg-3">
                         <a href="#" class="hover-animate">
-                            <span class="ukie-icons hover-animate"><i class="fa fa-phone"></i></span> +38 012-3456-7890
+                            <span class="ukie-icons hover-animate"><i class="fa fa-phone"></i></span><?php echo $verlitampil->notelp;?>
                         </a>
                     </div>
                     <!-- end phone number -->
                     <!-- start email -->
                     <div class="col-xs-12 col-sm-6 col-lg-3">
                         <a href="#" class="hover-animate">
-                            <span class="ukie-icons hover-animate"><i class="fa fa-paper-plane"></i></span> info@yourdomain.com
+                            <span class="ukie-icons hover-animate"><i class="fa fa-paper-plane"></i></span> <?php echo $verlitampil->email;?>
                         </a>
                     </div>
                     <!-- end email -->
                     <!-- start address -->
                     <div class="col-xs-12 col-sm-6 col-lg-3">
                         <a href="#" class="hover-animate">
-                            <span class="ukie-icons hover-animate"><i class="fa fa-map-marker"></i></span> 44 King St, Melbourne VIC
+                            <span class="ukie-icons hover-animate"><i class="fa fa-map-marker"></i></span><?php echo $verlitampil->lokasi;?>
                         </a>
                     </div>
                     <!-- end address -->
                     <!-- start Copyright -->
                     <div class="col-xs-12 col-sm-6 col-lg-3 text-right">
-                        <span class="copyright">Copyright © 2015 All right reserved</span>
+                        <span class="copyright"><?php echo $verlitampil->copyright;?></span>
                     </div>
                     <!-- end Copyright -->
                 </div>
@@ -99,9 +99,9 @@
 <script src="<?php echo base_url('gui/assets/js/jquery.inview.min.js');?>" type="text/javascript"></script>
 <script src="<?php echo base_url('gui/assets/js/jquery.knob.min.js');?>" type="text/javascript"></script>
 <script src="<?php echo base_url('gui/assets/js/jquery.cookie.js');?>" type="text/javascript"></script>
+<script src="<?php echo base_url('gui/assets/js/portfolio_scripts.js');?>" type="text/javascript"></script>
 <script src="<?php echo base_url('gui/assets/js/scripts.js');?>" type="text/javascript"></script>
 
 </body>
 
-<!-- Mirrored from ukieweb.com/envato/ukiecard/style2/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 12 Jul 2015 06:43:12 GMT -->
 </html>

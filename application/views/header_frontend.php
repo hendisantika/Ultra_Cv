@@ -6,7 +6,6 @@
 <html lang="en"> <!--<![endif]-->
 
 
-<!-- Mirrored from ukieweb.com/envato/ukiecard/style2/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 12 Jul 2015 06:42:51 GMT -->
 <head>
     <meta charset="utf-8" />
     <title>Ultraviolet CV</title>
@@ -18,13 +17,16 @@
     <link type="text/css" media="all" href="<?php echo base_url('gui/assets/fonts/font-awesome-4.3.0/css/font-awesome.min.css');?>" rel="stylesheet" />
     <!-- Libs CSS -->
     <link type="text/css" media="all" href="<?php echo base_url('gui/assets/boostrap-files/css/bootstrap.min.css');?>" rel="stylesheet" />
+      <link type="text/css" media="all" href="<?php echo base_url('gui/assets/css/magnific-popup.css');?>" rel="stylesheet" />
     <!-- Animate CSS -->
     <link type="text/css" media="all" href="<?php echo base_url('gui/assets/css/animate.css');?>" rel="stylesheet" />
     <!-- Template CSS -->
     <link type="text/css" media="all" href="<?php echo base_url('gui/assets/css/style.css');?>" rel="stylesheet" />
+     <link type="text/css" media="all" href="<?php echo base_url('gui/assets/css/switcher.css');?>" rel="stylesheet" />
     <!-- Switcher CSS -->
-    <link type="text/css" media="all" href="<?php echo base_url('gui/assets/css/switcher.css');?>" rel="stylesheet" />
     <link href="<?php echo base_url('gui/assets/css/colour-scheme/color-blue.css');?>" rel="stylesheet" type="text/css" data-color="color-blue" media="all" id="stylesheet-new">
+        <link href="<?php echo base_url('gui/assets/css/colour-scheme/color-orange.html.css');?>" rel="stylesheet" type="text/css" data-color="color-orange" media="all" id="stylesheet-new">
+
     <!-- Responsive CSS -->
     <link type="text/css" media="all" href="<?php echo base_url('gui/assets/css/respons.css');?>" rel="stylesheet" />
     <!-- Style Switcher -->

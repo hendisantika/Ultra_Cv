@@ -28,17 +28,17 @@ foreach ($cv->result() as $verlishow);
                         <h1 class="title"><?php echo $verlishow->username;?></h1>
                         
                         <!-- Your Profession -->
-                        <h3 class="sub-title">Web Designer & Mobile Application Developer</h3>
+
+                        <h3 class="sub-title"><?php echo $verlishow->title_skill;?></h3>
                         <!-- social icon -->
                         <div class="social">
                             <ul class="animated" data-animation="fadeIn" data-animation-delay="600">
                                 <!-- social icons -->
-                                <li><a class="ukie-icons hover-animate" href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a class="ukie-icons hover-animate" href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a class="ukie-icons hover-animate" href="#"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a class="ukie-icons hover-animate" href="#"><i class="fa fa-google-plus"></i></a></li>
-                                <li><a class="ukie-icons hover-animate" href="#"><i class="fa fa-dribbble"></i></a></li>
-                                <li><a class="ukie-icons hover-animate" href="#"><i class="fa fa-youtube"></i></a></li>
+                                <li><a class="ukie-icons hover-animate" href="<?php echo $verlishow->link_fb;?>" ><i class="fa fa-facebook"></i></a></li>
+                                <li><a class="ukie-icons hover-animate" href="<?php echo $verlishow->link_twit;?>"><i class="fa fa-twitter"></i></a></li>
+                            
+                                <li><a class="ukie-icons hover-animate" href="<?php echo $verlishow->link_google;?>"><i class="fa fa-google-plus"></i></a></li>
+                              
                                 <!--
                                     <li><a class="ukie-icons hover-animate" href="#"><i class="fa fa-behance"></i></a></li>
                                     <li><a class="ukie-icons hover-animate" href="#"><i class="fa fa-pinterest"></i></a></li>
@@ -90,18 +90,11 @@ foreach ($cv->result() as $verlishow);
                         <!-- end menu block (profile) -->
 
                         <!-- start menu block (resume) -->
-                        <a href="resume.html" class="menu-li">
-                            <!-- img menu block -->
-                            <span class="foto">
-                                <img src="<?php echo base_url('gui/assets/img/menu/style1/resume.png');?>" class="menu-img" data-img-name="resume" alt="Ukieweb">
-                            </span>
-                            <!-- name menu block -->
-                            <span class="name">Resume</span>
-                        </a>
+                      
                         <!-- end menu block (resume) -->
 
                         <!-- start menu block (portfolio) -->
-                        <a href="portfolio.html" class="menu-li">
+                        <a href="<?php echo base_url('frontend/portofolio/');?>" class="menu-li">
                             <!-- img menu block -->
                             <span class="foto">
                                 <img src="<?php echo base_url('gui/assets/img/menu/style1/portfolio.png');?>" class="menu-img" data-img-name="portfolio" alt="Ukieweb">
@@ -112,7 +105,7 @@ foreach ($cv->result() as $verlishow);
                         <!-- end menu block (portfolio) -->
 
                         <!-- start menu block (blog) -->
-                        <a href="blog.html" class="menu-li">
+                        <a href="<?php echo base_url('frontend/blog/');?>" class="menu-li">
                             <!-- img menu block -->
                             <span class="foto">
                                 <img src="<?php echo base_url('gui/assets/img/menu/style1/blog.png');?>" class="menu-img" data-img-name="blog" alt="Ukieweb">
@@ -123,15 +116,7 @@ foreach ($cv->result() as $verlishow);
                         <!-- end menu block (portfolio) -->
 
                         <!-- start menu block (contact) -->
-                        <a href="contact.html" class="menu-li">
-                            <!-- img menu block -->
-                            <span class="foto">
-                                <img src="<?php echo base_url('gui/assets/img/menu/style1/contact.png');?>" class="menu-img" data-img-name="contact" alt="Ukieweb">
-                            </span>
-                            <!-- name menu block -->
-                            <span class="name">Contact</span>
-                        </a>
-                        <!-- end menu block (contact) -->
+                      
                     </div>
                 </div>
                 <!-- end row -->

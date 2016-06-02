@@ -13,7 +13,7 @@
             <!-- BASIC FORM ELELEMNTS -->
 <?php
 $username= $this->session->userdata('username');?>
-<?php echo form_open_multipart ('index.php/upload_img/upload/'); ?>
+<?php echo form_open_multipart('index.php/upload_img/upload/'); ?>
 
 <div class="row mt">
 <div class="col-lg-12">
@@ -24,6 +24,18 @@ $username= $this->session->userdata('username');?>
 <label class="col-sm-2 col-sm-2 control-label">Title Hi</label>
 <div class="col-sm-10">
 <input type="text"  name="title" class="form-control" placeholder="Judul Blog" required>
+</div>
+<label class="col-sm-2 col-sm-2 control-label">Kategori</label>
+<div class="col-sm-10">
+<select name="kategoris"  class="form-control">
+<?php 
+echo "<option value=not_kategori>---- Pilih Kategori ----</option>";
+foreach ($kategori->result() as $g)
+{
+echo " <option value=$g->id_category>$g->name_category </option>";
+}
+?>
+</select>
 </div>
 <label class="col-sm-2 col-sm-2 control-label">Pengirim</label>
 <div class="col-sm-10">
@@ -43,6 +55,8 @@ $username= $this->session->userdata('username');?>
 </div> 
 </div>
 </div>
+
+                      <!--LIST BLOG-->
 <div class="row mt">
                   <div class="col-md-12">
                       <div class="content-panel">
@@ -53,6 +67,7 @@ $username= $this->session->userdata('username');?>
                                <tr>
                               <th></i> No</th>
                                   <th><i class="fa fa-bullhorn"></i> Judul</th>
+                                  <th>Category</th>
                                   <th class="hidden-phone"><i class="fa fa-question-circle"></i> Pengirim</th>
                                   <th><i class="fa fa-bookmark"></i> Desc</th>
                                   <th><i class=" fa fa-edit"></i> Image</th>
@@ -60,25 +75,26 @@ $username= $this->session->userdata('username');?>
                                   <th></th>
                               </tr>
                               </thead>
+                                       <?php echo $this->pagination->create_links();?>            
                               <?php 
                               $verli=1;
-                            foreach ($blog->result() as $x) { ?>
+                            foreach ($blog as $x) { ?>
                               <tbody>
                               <tr>
                               <td><?php echo $verli++;?>
                                   <td><a href="basic_table.html#"><?php echo $x->judul;?></a></td>
+                                  <td><?php echo $x->name_category;?></td>
                                   <td class="hidden-phone"><?php echo $x->pengirim;?></td>
                                   <td><?php echo $x->isi_blog;?></td>
-                                 <td><img src="<?php echo base_url('assets/img_blog/'.$x->img_blog.'');?>"width="50px"></td>
-                                 <td><?php echo $x->date;?>
+                                  <td><img src="<?php echo base_url('assets/img_blog/'.$x->img_blog.'');?>"width="50px"></td>
+                                  <td><?php echo $x->date;?>
                                   <td>
-                                      <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
-                                      <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
-                                      <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
+                                      <a href="<?php echo base_url('admin_area/delete_blog/'.$x->id_blog.' ');?>" class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
                                   </td>
                               </tr>
                                  <?php }?>
-                             
+
+                
                               </tbody>
                           </table>
                       </div><!-- /content-panel -->
